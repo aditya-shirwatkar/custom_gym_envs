@@ -1,6 +1,6 @@
 import numpy as np
 from gym import utils
-from gym.envs.mujoco import mujoco_env
+import gym_custom_envs.mujoco.mujoco_custom as mujoco_env
 
 class FiveLinkWalker2dEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
@@ -16,8 +16,10 @@ class FiveLinkWalker2dEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         reward = ((posafter - posbefore) / self.dt)
         reward += alive_bonus
         reward -= 1e-3 * np.square(a).sum()
-        done = not (height > 0.8 and height < 2.0 and
-                    ang > -1.0 and ang < 1.0)
+        done = not (height > 0.1 and height < 2.0 
+                    # and
+                    # ang > -1.0 and ang < 1.0
+                    )
         ob = self._get_obs()
         return ob, reward, done, {}
 

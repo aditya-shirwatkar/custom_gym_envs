@@ -1,2 +1,2 @@
-from gym_custom_envs.mujoco.mujoco_env import MujocoEnv
+from gym_custom_envs.mujoco.mujoco_custom import MujocoEnv
 from gym_custom_envs.mujoco.five_link_walker import FiveLinkWalker2dEnv
