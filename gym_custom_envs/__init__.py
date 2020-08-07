@@ -20,3 +20,7 @@ register(
     id='Quadrotor2D-trajopt-v0',
     entry_point='gym_custom_envs.envs:Quad2DEnv_trajopt',
 )
+register(
+    id='FiveLink-v0',
+    entry_point='gym_custom_envs.mujoco:FiveLinkWalker2dEnv',
+)
