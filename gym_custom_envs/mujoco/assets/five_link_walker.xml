@@ -3,7 +3,7 @@
   <compiler angle="degree" coordinate="global" inertiafromgeom="true"/>
 
   <default>
-    <joint armature="0.01" damping=".1" limited="true"/>
+    <joint armature="0.01" damping="0." limited="true"/>
     <geom conaffinity="0" condim="3" contype="1" density="1000" friction=".7 .1 .1" rgba="0.8 0.6 .4 1"/>
   </default>
 
